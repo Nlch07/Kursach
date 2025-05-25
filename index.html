@@ -7,6 +7,10 @@
     <title>Сайт с темным режимом и языком</title>
     <style>
             @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,13 +18,13 @@
             background-color: #f1f1f1;
             color: #333333;
             transition: background-color 0.3s, color 0.3s;
+            padding-top: 90px;
         }
 
 
 
-
         body.dark-mode {
-            background-color: #1a1a1a;
+            background-color: rgb(20, 20, 20);
             color: #f0f0f0;
         }
         body.dark-mode a{
@@ -29,14 +33,28 @@
         }
         body.dark-mode .logo{
             text-decoration: none;
-            color: #0d8baa;
+            color: #0021db;
         }
         body.dark-mode .left h1 span{
             text-decoration: none;
-            color: #0d8baa;
+            color: #0021db;
         }
-        
-
+        body.dark-mode .sell-nft .item h3{
+            text-decoration: none;
+            color: #f0f0f0;
+        }
+        body.dark-mode .nft-image {
+            border: 3px solid #f0f0f0;
+        }
+        body.dark-mode .prompt-sec .prompt-img img {
+                box-shadow: 0 -20px 40px rgb(189, 77, 3);
+        }
+        body.dark-mode .container h2 {
+                color: #f0f0f0;
+        }
+        body.dark-mode .container p {
+                color: #f0f0f0;
+        }
 
 
 
@@ -73,8 +91,6 @@
         }
 
 
-
-
 a{
     text-decoration: none;
     color: #000;
@@ -85,12 +101,22 @@ a{
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-nav{
-    padding: 0 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
+        nav {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        background: #f1f1f1, 0,9; /* лёгкая прозрачность */
+        backdrop-filter: blur(12px);
+        border-radius: 12px;
+        z-index:1000;
 }
 
 nav a.logo{
@@ -166,28 +192,24 @@ header .left a span{
 header img{
     width: 600px;
 }
-h2.separator{
-    padding: 0 80px;
-    font-size: 40px;
-    margin-top: 40px;
+
+
+.separator {
+  padding-top: 50px;
+  text-align: center; 
+  font-size: 50px;
+  margin: 50px;
 }
+
 
 .sell-nft{
-    padding: 0 80px;
-    margin: 50px 0 80px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    height: 850px;
+
 }
 
-.sell-nft .item,
-.nft-shop .nft-list .item{
-    padding: 20px;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+
 
 .sell-nft .item:hover,
 .nft-shop .nft-list .item:hover,
@@ -205,111 +227,201 @@ h2.separator{
     font-size: 40px;
 }
 
-.sell-nft .item .header h5{
-    font-size: 17px;
-}
 
-.sell-nft .item p{
-    margin-top: 10px;
-    padding: 0 4px;
-}
 
-.nft-shop{
-    padding: 0 80px;
-    margin-top: 30px;
-}
 
-.nft-shop .category{
-    display: flex;
-    gap: 14px;
-}
-
-.nft-shop .category a{
-    background-color: #dfdcdc;
-    padding: 8px 14px;
-    font-size: 15px;
-    border-radius: 14px;
-    transition: all 0.3s ease;
-}
-
-.nft-shop .category a:hover{
-    color: #fff;
-    background-color: #0f2182;
-}
-
-.nft-shop .nft-list{
-    padding: 40px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.nft-shop .nft-list .item img{
-    width: 280px;
-    height: 280px;
-    border-radius: 18px;
-}
-
-.nft-shop .nft-list .item .info{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid #edecec;
-}
-
-.nft-shop .nft-list .item .info h5{
-    font-size: 18px;
-}
-
-.nft-shop .nft-list .item .info .btc{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.nft-shop .nft-list .item .btc i{
+.sell-nft .item h3{
+    width: 900px;
     font-size: 22px;
-    color: #304ffe;
+    font-weight: 300;
+}
+.sell-nft .item p{
+    margin-top: 15px;
+}
+.sell-nft .item .bbb{
+    font-weight: 500;
 }
 
-.nft-shop .nft-list .item .btc p{
-    font-size: 12px;
-    color: #304ffe;
+
+
+
+
+
+img{
+    object-fit: cover;
+}
+.prompt-sec{
+    padding: 20px;
 }
 
-.nft-shop .nft-list .item .info > p{
-    font-size: 12px;
-    color: #989898;
+.prompt-sec h1{
+    color: #ccc;
+    font-size: 182px;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 36px;
+}
+            
+    .prompt-sec .prompt-img {
+    position: relative;
+    display: flex;
+    justify-content: center; /* центрирует изображение */
+    }
+
+
+
+    .prompt-sec .prompt-img img {
+    width: 92%; /* сделаем изображение уже */
+    height: 540px;
+    border-radius: 60px;
+    object-fit: cover;
+    object-position: top center;
+    box-shadow: 0 -20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+
+.prompt-sec .prompt-img input{
+    width: 55%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    padding: 16px;
+    text-align: center;
+    color: #fff;
 }
 
-.nft-shop .nft-list .item .bid{
-    padding: 14px 0 4px;
+.prompt-sec .prompt-img input::placeholder{
+    color: #ccc;
+}
+
+.prompt-sec .prompt-img .tabs{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
 }
 
-.nft-shop .nft-list .item .bid p,
-.nft-shop .nft-list .item .bid a{
-    background-color: #edecec;
-    padding: 6px 10px;
-    font-size: 13px;
-    border-radius: 10px;
-}
-
-.nft-shop .nft-list .item .bid a{
-    color: #304ffe;
-    background: transparent;
-    font-weight: bold;
+.prompt-sec .prompt-img .tabs a{
+    color: #fff;
+    background: #231f1c;
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    border-radius: 50px;
+    transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.nft-shop .nft-list .item .bid a:hover{
-    color: #fff;
-    background-color: #000;
+.prompt-sec .prompt-img .tabs a.active,
+.prompt-sec .prompt-img .tabs a:hover{
+    color: #231f1c;
+    background: #a3e635;
 }
+
+
+
+
+
+
+.services .service-items{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 80px;
+    padding-bottom: 400px;
+}
+
+.services .service-items .item{
+    background: #171717;
+    padding: 20px;
+    border-radius: 40px;
+    width: 25%;
+}
+
+.services .service-items .item .title{
+    display: flex;
+    align-items: center;
+    background: #2e2c29;
+    padding: 5px 20px 5px 5px;
+    gap: 10px;
+    width: fit-content;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.services .service-items .item .title .gradient{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.services .service-items .item:nth-child(1) .title .gradient{
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+}
+
+.services .service-items .item:nth-child(2) .title .gradient{
+    background-image: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+}
+
+.services .service-items .item:nth-child(3) .title .gradient {
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.services .service-items .item:nth-child(4) .title .gradient {
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+
+.services .service-items .item .desc h5{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.services .service-items .item.active{
+    background: #a3e635;
+}
+
+.services .service-items .item.active .title{
+    background: #000;
+}
+
+.services .service-items .item.active .desc h5{
+    color: #000;
+}
+
+.services .service-items .item.active .desc p{
+    color: #313131;
+}
+
+
+
+
+
+        .nft-image {
+        height: 500px;
+        width: 700px;
+        border: 3px solid #333;        
+        border-radius: 16px;           
+        margin: 15px 75px 15px 15px; 
+        padding: 5px;                         
+        box-sizing: border-box;        
+        }
 
 .view-more{
     margin: 10px 0 40px;
@@ -361,68 +473,42 @@ h2.separator{
     margin-top: 8px;
 }
 
-footer{
-    background-color: #000;
+.site-footer {
+    background-color: #222;
     color: #fff;
-    padding: 100px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    padding: 30px 20px 15px;
+    font-family: sans-serif;
 }
 
-footer h3{
-    font-size: 48px;
+.site-footer .links {
+    margin-bottom: 25px;
 }
 
-footer .right{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 26px;
-}
-
-footer .right .links{
-    display: flex;
-    gap: 30px;
-}
-
-footer .right .links a{
-    color: #989898;
-    transition: color 0.3s ease;
-}
-
-footer .right .links a:hover{
+.site-footer .links a {
     color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-footer .right .social{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.site-footer .links a:hover {
+    color: #f0c040;
 }
 
-footer .right .social i{
-    font-size: 30px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.site-footer .footer-bottom {
+    font-size: 20px;
+    padding: 10px;
+    color:#ccc;
 }
 
-footer .right .social i:hover{
-    color: #304ffe;
-}
-
-footer .right p{
-    font-size: 13px;
-    color: #777;
-}
 
 @media screen and (max-width: 1400px) {
     
     nav,
     header,
     h2.separator,
-    .sell-nft,
     .nft-shop,
     .sellers{
         padding: 0 40px;
@@ -465,17 +551,7 @@ footer .right p{
         font-size: 34px;
     }
 
-    .sell-nft .item .header i{
-        font-size: 36px;
-    }
 
-    .sell-nft .item .header h5{
-        font-size: 15px;
-    }
-
-    .sell-nft .item p{
-        font-size: 13px;
-    }
 
     .nft-shop .nft-list{
         flex-wrap: wrap;
@@ -529,14 +605,7 @@ footer .right p{
         width: 100%;
     }
 
-    .sell-nft{
-        flex-wrap: wrap;
-        gap: 20px;
-    }
 
-    .sell-nft .item{
-        width: 48%;
-    }
 
     .sellers{
         gap: 20px;
@@ -564,7 +633,6 @@ footer .right p{
     nav,
     header,
     h2.separator,
-    .sell-nft,
     .nft-shop,
     .sellers{
         padding: 0 20px;
@@ -617,9 +685,6 @@ footer .right p{
         font-size: 30px;
     }
 
-    .sell-nft .item{
-        width: 100%;
-    }
 
     .nft-shop .nft-list .item,
     .sellers .item{
@@ -631,7 +696,29 @@ footer .right p{
     }
 
 }
+#one{
+    scroll-margin-top: 500px;
+}
 
+#two{
+    scroll-margin-top: 100px;
+}
+
+#three{
+    scroll-margin-top: 100px;
+}
+
+#four{
+    scroll-margin-top: 100px;
+}
+
+#five{
+    scroll-margin-top: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
     </style>
 </head>
 <body>
@@ -642,10 +729,11 @@ footer .right p{
         <nav>
         <a href="#" class="logo">Зачетная работа</a>
         <div class="links">
-            <a href="#">Титульник</a>
-            <a href="#">Историря шахмат</a>
-            <a href="#">Игровые Обновы</a>
-            <a href="#">ИИ</a>
+            <a href="#one">Титульник</a>
+            <a href="#two">Историря шахмат</a>
+            <a href="#three">Игровые Обновы</a>
+            <a href="#four">Пример</a>
+            <a href="#five">ИИ</a>
         </div>
         <div class="controls">
             <button id="theme-toggle">🌓 Темный режим</button>
@@ -654,221 +742,403 @@ footer .right p{
     </nav>
 
     <header>
-        <div class="left">
+        <div class="left" id="one">
             <h1>Разработка сайта про <span>Шахматы</span></h1>
             <p>Выполнил студент 2 курса КБГУ <p>Направления Информатика Вычислительная Техника <p>Халакоев Астемир 
             </p>
         </div>
         <img src="foto/header.png">
     </header>
-<h2 class="separator">
-        Sell Your NFTs
+
+    <h2 class="separator" id="two">История создания шахмат</h2>
+
+
+    <div class="sell-nft">
+        <div class="item">
+            <div class="header">
+                <img src="https://i.playground.ru/e/0Xr9-q4DnsFB0KL08_9dTw.png" class="nft-image">
+            <h3>История шахмат начинается в древней <span class="bbb">Индии</span>, где в V–VI веках н. э. была создана игра под названием чатуранга.
+                Она состояла из четырёх видов фигур, которые представляли армию: слоны, кони, колесницы и пехоту.
+                Игроки перемещали фигуры по игровой доске, пытаясь захватить короля противника.
+
+                <p>С течением времени игра стала популярной в Персии, где она была изменена и получила название шатранж.
+                В шатранже появились новые фигуры, такие как ферзь и ладья, и правила игры были упрощены.
+                В <span class="bbb">Арабском мире</span> игра была доработана и получила своё современное название — шахматы.
+                Новые правила и фигуры были добавлены, и игра стала более сложной и увлекательной.
+                Из Персии шахматы распространились на Ближний Восток, а затем в Европу.
+                Шатрандж был привезён арабами в Испанию в VIII–IX веках, а затем распространился по Португалии, Италии и Франции.</p>
+
+                <p>Игра быстро стала популярной среди европейцев и к XI веку была известна во всех странах Европы и Скандинавии.
+                Современный вид шахматы приобрели в 1475 году после изменения правил,
+                благодаря которым ферзь получил возможность бить на любое количество ходов,
+                а слон перестал прыгать по доске и начал ходить по диагонали. </p></h3>
+            </div>
+        </div>
+    </div>
+
+
+
+            <div class="prompt-sec" id="three">
+        <h1>Обновления</h1>
+        <div class="prompt-img">
+            <img src="foto/header.JPG">
+            <input type="text" placeholder="Все изменения в правилах">
+            <div class="tabs">
+                <a href="#"  data-index="0">8 век</a>
+                <a href="#" class="active" data-index="1">16 век</a>
+                <a href="#" data-index="2">19 век</a>
+                <a href="#" data-index="3">21 век</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="services" id="services">
+        <div class="service-items">
+            <div class="item">
+                <div class="title">
+                    <div class="gradient"></div>
+                    <p>Персия</p>
+                </div>
+                <div class="desc">
+                    <h5>VIII век</h5>
+                    <p>
+                        Правила игры были упрощены, добавлены ладья и ферзь. Игра начала распространятся в Исапании.
+                    </p>
+                </div>
+            </div>
+            <div class="item active">
+                <div class="title">
+                    <div class="gradient"></div>
+                    <p>Англия</p>
+                </div>
+                <div class="desc">
+                    <h5>XVI век</h5>
+                    <p>Ферзь получил возможность ходить по любой диагонали, а "прыжок" слона был отменён. Началось изучение дебютов.</p>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <div class="title">
+                    <div class="gradient"></div>
+                    <p>Европа</p>
+                </div>
+                <div class="desc">
+                    <h5>XIX век</h5>
+                    <p> Стала общепринятой редакция правил, предложенная Говардом Стаунтоном. С тех пор белые всегда ходят первыми, пат ведёт к ничьей, а пешки могут брать на проходе.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="title">
+                    <div class="gradient"></div>
+                    <p>Мир</p>
+                </div>
+                <div class="desc">
+                    <h5>XXI век</h5>
+                    <p>Федерация шахмат(ФИДЕ) установила общепризнанные правила и внешний вид фигур. Шахматы признаны всем миром как вид спорта
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container" id="four">
+  <div class="info">
+    <h2>Пример современных шахмат</h2>
+    <p>
+      Шахматы прошли долгий путь от древних времен до наших дней. 
+      Они эволюционировали от простых настольных игр до сложного вида спорта с официальными правилами и международными турнирами. 
+      Современные шахматы включают такие правила, как рокировка, взятие на проходе, продвижение пешки и обязательный шах. 
+      Игра требует стратегического мышления, планирования и анализа. 
+      В последние годы шахматы получили новый импульс благодаря онлайн-платформам и искусственному интеллекту, 
+      что делает их доступными для миллионов людей по всему миру.
+    </p>
+  </div>
+  <div class="chess"></div>
+</div>
+
+<style>
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    width: 92%; /* вместо max-width */
+    margin: 30px auto;
+    gap: 50px;
+    box-sizing: border-box;
+    padding-bottom: 250px;
+}
+  .info {
+    max-width: 950px;
+    font-family: Arial, sans-serif;
+    color: #222;
+  }
+  .info h2 {
+    margin:30px 15px;
+    font-size: 40px;
+  }
+  .info p {
+    margin: 15px;
+    line-height: 2;
+    font-size: 22px;
+  }
+</style>
+
+
+
+<div class="chess"></div>
+
+<script>
+(function() {
+  const container = document.querySelector('.chess');
+  container.innerHTML = `<style>
+    .chess table { border-collapse: collapse; margin: 20px auto; }
+    .chess td {
+      width: 60px; height: 60px;
+      text-align: center; vertical-align: middle;
+      font-size: 36px; cursor: pointer;
+      user-select: none;
+    }
+    .chess .white { background: и; }
+    .chess .black { background: white; }
+
+    body.dark-mode .chess .white{ background: blue;}
+    body.dark-mode .chess .black{ background: grey;}
+
+    .chess .selected { outline: 3px solid black; }
+  </style>
+  <table id="chess-board"></table>`;
+
+  const board = container.querySelector("#chess-board");
+  const pieces = {
+    r: "♜", n: "♞", b: "♝", q: "♛", k: "♚", p: "♟",
+    R: "♖", N: "♘", B: "♗", Q: "♕", K: "♔", P: "♙"
+  };
+  let state = [
+    ["r","n","b","q","k","b","n","r"],
+    ["p","p","p","p","p","p","p","p"],
+    ["","","","","","","",""],
+    ["","","","","","","",""],
+    ["","","","","","","",""],
+    ["","","","","","","",""],
+    ["P","P","P","P","P","P","P","P"],
+    ["R","N","B","Q","K","B","N","R"]
+  ];
+  let selected = null;
+  let turn = "white";
+
+  function render() {
+    board.innerHTML = "";
+    for (let y = 0; y < 8; y++) {
+      const row = document.createElement("tr");
+      for (let x = 0; x < 8; x++) {
+        const cell = document.createElement("td");
+        const cellColor = (x + y) % 2 === 0 ? "white" : "black";
+        cell.className = cellColor;
+
+        const piece = state[y][x];
+        cell.textContent = pieces[piece] || "";
+
+        // Цвет фигуры зависит от ее цвета, не клетки
+        const pieceColor = getColor(piece);
+        if (pieceColor === "brown") {
+          cell.style.color = "white";
+        } else if (pieceColor === "black") {
+          cell.style.color = "black";
+        } else {
+          cell.style.color = "";
+        }
+
+        cell.onclick = () => handleClick(x, y);
+
+        if (selected && selected[0] === x && selected[1] === y) {
+          cell.classList.add("selected");
+        }
+        row.appendChild(cell);
+      }
+      board.appendChild(row);
+    }
+  }
+
+  function getColor(piece) {
+    if (!piece) return null;
+    return piece === piece.toUpperCase() ? "white" : "black";
+  }
+
+  function handleClick(x, y) {
+    const piece = state[y][x];
+    if (selected) {
+      const [sx, sy] = selected;
+      const moving = state[sy][sx];
+      if ((sx !== x || sy !== y) && isLegalMove(sx, sy, x, y)) {
+        state[y][x] = moving;
+        state[sy][sx] = "";
+        selected = null;
+        turn = turn === "white" ? "black" : "white";
+      } else {
+        selected = null;
+      }
+    } else if (piece && getColor(piece) === turn) {
+      selected = [x, y];
+    }
+    render();
+  }
+
+  function isLegalMove(sx, sy, dx, dy) {
+    const piece = state[sy][sx];
+    const target = state[dy][dx];
+    const color = getColor(piece);
+    const dxAbs = Math.abs(dx - sx);
+    const dyAbs = Math.abs(dy - sy);
+
+    if (target && getColor(target) === color) return false;
+
+    const dirX = Math.sign(dx - sx);
+    const dirY = Math.sign(dy - sy);
+
+    const isClear = () => {
+      let x = sx + dirX, y = sy + dirY;
+      while (x !== dx || y !== dy) {
+        if (state[y][x]) return false;
+        x += dirX;
+        y += dirY;
+      }
+      return true;
+    };
+
+    switch (piece.toLowerCase()) {
+      case "p":
+        const direction = color === "white" ? -1 : 1;
+        const startRow = color === "white" ? 6 : 1;
+        if (dx === sx && dy === sy + direction && !target) return true;
+        if (dx === sx && dy === sy + 2 * direction && sy === startRow && !target && !state[sy + direction][sx]) return true;
+        if (dxAbs === 1 && dy === sy + direction && target) return true;
+        return false;
+      case "r":
+        if (dx === sx || dy === sy) return isClear();
+        return false;
+      case "b":
+        if (dxAbs === dyAbs) return isClear();
+        return false;
+      case "q":
+        if (dx === sx || dy === sy || dxAbs === dyAbs) return isClear();
+        return false;
+      case "k":
+        return dxAbs <= 1 && dyAbs <= 1;
+      case "n":
+        return (dxAbs === 1 && dyAbs === 2) || (dxAbs === 2 && dyAbs === 1);
+    }
+    return false;
+  }
+
+  render();
+})();
+</script>
+
+
+<h2 class="separator" id="five">
+        Переломный момент в истории шахмат
     </h2>
 
     <div class="sell-nft">
         <div class="item">
             <div class="header">
-                <i class='bx bx-wallet-alt'></i>
-                <h5>Connect Wallet</h5>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
-                fuga sed earum.</p>
-        </div>
-        <div class="item">
-            <div class="header">
-                <i class='bx bx-cart-alt'></i>
-                <h5>NFT Marketplace</h5>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
-                fuga sed earum.</p>
-        </div>
-        <div class="item">
-            <div class="header">
-                <i class='bx bx-grid-alt'></i>
-                <h5>Launch DApps</h5>
-            </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
-                fuga sed earum.</p>
-        </div>
-    </div>
+                <img src="https://img.gazeta.ru/files3/738/13481738/AP_9602130909-pic4_zoom-1500x1500-47092.jpg" class="nft-image" >
+            <h3>Первый матч между Гарри Каспаровым и Deep Blue прошёл в Филадельфии (Пенсильвания, США) 
+                с 10 по 17 февраля 1996 года. На следующий день Каспаров белыми взял реванш и сравнял счёт в матче.
+                  Третья и четвёртая партии завершились вничью. В результате гроссмейстер добился победы. Шестая партия также
+                    завершилась в пользу Каспарова. Итоговый счёт противостояния — 4:2 в пользу человека. 
 
-    <h2 class="separator">
-        Super Hot NFTs
-    </h2>
-
-    <div class="nft-shop">
-        <div class="category">
-            <a href="#">AsmrGraph</a>
-            <a href="#">Abstract</a>
-            <a href="#">Monkey</a>
-            <a href="#">Cars</a>
-            <a href="#">Trending</a>
-        </div>
-
-        <div class="nft-list">
-            <div class="item">
-                <img src="assets/item-1.png">
-                <div class="info">
-                    <div>
-                        <h5>CryptoArt</h5>
-                        <div class="btc">
-                            <i class='bx bxl-bitcoin'></i>
-                            <p>0.29 BTC</p>
-                        </div>
-                    </div>
-                    <p>5 of 33</p>
-                </div>
-                <div class="bid">
-                    <p>2h 28m 1s</p>
-                    <a href="#">Place a Bid</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/item-2.png">
-                <div class="info">
-                    <div>
-                        <h5>Abs-Art</h5>
-                        <div class="btc">
-                            <i class='bx bxl-bitcoin'></i>
-                            <p>0.21 BTC</p>
-                        </div>
-                    </div>
-                    <p>7 of 12</p>
-                </div>
-                <div class="bid">
-                    <p>1h 28m 1s</p>
-                    <a href="#">Place a Bid</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/item-3.png">
-                <div class="info">
-                    <div>
-                        <h5>TestArt</h5>
-                        <div class="btc">
-                            <i class='bx bxl-bitcoin'></i>
-                            <p>0.21 BTC</p>
-                        </div>
-                    </div>
-                    <p>9 of 23</p>
-                </div>
-                <div class="bid">
-                    <p>4h 21m 1s</p>
-                    <a href="#">Place a Bid</a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/item-4.png">
-                <div class="info">
-                    <div>
-                        <h5>Art-4</h5>
-                        <div class="btc">
-                            <i class='bx bxl-bitcoin'></i>
-                            <p>0.45 BTC</p>
-                        </div>
-                    </div>
-                    <p>1 of 33</p>
-                </div>
-                <div class="bid">
-                    <p>0h 28m 1s</p>
-                    <a href="#">Place a Bid</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="view-more">
-        <button>View More</button>
-    </div>
-
-    <h2 class="separator">
-        Best Sellers
-    </h2>
-
-    <div class="sellers">
-        <div class="item">
-            <img src="assets/profile-1.png">
-            <div class="info">
-                <h4>Jhone D</h4>
-                <p>15.2K</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="assets/profile-2.png">
-            <div class="info">
-                <h4>Gregory B</h4>
-                <p>12.7K</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="assets/profile-3.png">
-            <div class="info">
-                <h4>Stephen E</h4>
-                <p>7.9K</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="assets/profile-4.png">
-            <div class="info">
-                <h4>Russell M</h4>
-                <p>4.2K</p>
+                <p></p>Второй матч Каспаров — Deep Blue прошёл с 3 по 11 мая 1997 года в Нью-Йорке.
+                 Каспаров одержал победу в первой партии, однако потерпел
+                    поражение во второй. При этом в концовке проигранной партии гроссмейстер
+                        совершил ошибку, упустив возможность добиться ничьей с помощью «вечного шаха».
+                        <p></p>В решающей шестой
+                        партии Каспаров играл чёрными. В дебюте гроссмейстер допустил грубую ошибку, 
+                        после чего был вынужден 
+                    сдаться уже на 19-м ходу. Таким образом, <span class="bbb">компьютер одержал победу</span> в 
+                    матче с чемпионом мира по шахматам — 3,5:2,5. 
             </div>
         </div>
     </div>
 
-    <footer>
-        <h3>Create, Explore & Collect Abstract NFTs</h3>
-        <div class="right">
-            <div class="links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cooperation</a>
-                <a href="#">Sponsorship</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <div class="social">
-                <i class='bx bxl-instagram'></i>
-                <i class='bx bxl-facebook-square'></i>
-                <i class='bx bxl-github'></i>
-            </div>
-            <p>Copyright © 2024 AsmrProg, All Rights Reserved.</p>
-        </div>
-    </footer>
 
 
-    <script>
+<footer class="site-footer">
+    <div class="links">
+        <a href="#one">Титульник</a>
+        <a href="#two">История шахмат</a>
+        <a href="#three">Игровые Обновы</a>
+        <a href="#four">Пример</a>
+        <a href="#five">ИИ</a>
+    </div>
+    <div class="footer-bottom">
+        Халакоев Астемир&copy; 2025
+    </div>
+</footer>
+
+
+
+
+
+
+        <script>
+        const tabs = document.querySelectorAll('.tabs a');
+        const items = document.querySelectorAll('.service-items .item');
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', (e) => {
+                e.preventDefault();
+
+            // Удаляем активный класс у всех табов и блоков
+        tabs.forEach(t => t.classList.remove('active'));
+        items.forEach(item => item.classList.remove('active'));
+
+            // Добавляем активный класс к выбранному табу и блоку
+        tab.classList.add('active');
+        items[index].classList.add('active');
+            });
+        });
+
+
         // Конфигурация языков
         const translations = {
             ru: {
-                title: "Мой сайт",
-                content: "Это пример сайта с переключателем темной темы и языка.",
-                themeButton: "🌓 Темный режим",
-                languageButton: "🇷🇺 Русский"
+            title: "Мой сайт",
+            content: "Это пример сайта с переключателем темной темы и языка.",
+            themeButton: "🌓 Темный режим",
+            languageButton: "🇷🇺 Русский"
             },
             en: {
-                title: "Си website",
-                content: "Мир си сайт, мыбы щыэ нэф темэрэ, Адыгъэгбзэ темэре .",
-                themeButton: "🌓 Нэф режим",
-                languageButton: "🇬🇧 Адыгэ"
+            title: "Си website",
+            content: "Мир си сайт, мыбы щыэ нэф темэрэ, Адыгъэгбзэ темэре.",
+            themeButton: "🌓 Нэф режим",
+            languageButton: "🇬🇧 Адыгэ"
             }
         };
 
-        // Элементы DOM
+        // DOM-элементы
         const themeToggle = document.getElementById('theme-toggle');
         const languageToggle = document.getElementById('language-toggle');
         const body = document.body;
 
-        // Проверка сохраненных настроек темы
+        // Применение сохранённой темы
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark-mode');
-            updateThemeButtonText();
         }
 
-        // Установка языка при загрузке
+        // Применение языка при загрузке
         const currentLanguage = localStorage.getItem('language') || 'ru';
         updateLanguage(currentLanguage);
+        updateThemeButtonText();
 
-        // Переключение темы
+        // Обработчик кнопки переключения темы
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDark = body.classList.contains('dark-mode');
@@ -876,31 +1146,31 @@ footer .right p{
             updateThemeButtonText();
         });
 
-        // Переключение языка
+        // Обработчик кнопки переключения языка
         languageToggle.addEventListener('click', () => {
-            const newLanguage = localStorage.getItem('language') === 'ru' ? 'en' : 'ru';
-            localStorage.setItem('language', newLanguage);
-            updateLanguage(newLanguage);
+            const newLang = localStorage.getItem('language') === 'ru' ? 'en' : 'ru';
+            localStorage.setItem('language', newLang);
+            updateLanguage(newLang);
             updateThemeButtonText();
         });
 
-        // Обновление текста кнопки темы
+        // Обновление текста кнопки темы в зависимости от языка и режима
         function updateThemeButtonText() {
             const isDark = body.classList.contains('dark-mode');
-            const language = localStorage.getItem('language') || 'ru';
-            themeToggle.textContent = isDark 
-                ? (language === 'en' ? '🌞 Махуэ Mode' : '🌞 Светлый режим')
-                : (language === 'en' ? '🌓 Жэщ Mode' : '🌓 Темный режим');
+            const lang = localStorage.getItem('language') || 'ru';
+            themeToggle.textContent = isDark
+            ? (lang === 'en' ? '🌞 Махуэ Mode' : '🌞 Светлый режим')
+            : (lang === 'en' ? '🌓 Жэщ Mode' : '🌓 Темный режим');
         }
 
-        // Обновление языка на странице
+        // Обновление текста на странице при смене языка
         function updateLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = translations[lang][key];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = translations[lang][key];
             });
             languageToggle.textContent = lang === 'en' ? '🇷🇺 Русский' : 'Адыгэбзэ';
         }
-    </script>
+        </script>
 </body>
 </html>
