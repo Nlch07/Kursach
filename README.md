@@ -1,4 +1,4 @@
 # Kursach 
-Пока в разработке
-ааааааа негры
-https://nlch07.github.io/Kursach/# <- Gjctnbnm cfqn
+Добавлен Кабардинский язык
+https://nlch07.github.io/Kursach/# <- Готовый сайт
+
